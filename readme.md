@@ -44,7 +44,7 @@ Back end :
 Based on the following mockup on Adobe xD : 
 ![LoginPage](https://github.com/madelinehenry/23-Minichat/blob/main/assets/img/Login_Page.png)
 ![RegistrationPage](https://github.com/madelinehenry/23-Minichat/blob/main/assets/img/Registration_Page.png)
-![IndexPage](https://github.com/madelinehenry/23-Minichat/blob/main/assets/img/Idex_Page.png)
+![IndexPage](https://github.com/madelinehenry/23-Minichat/blob/main/assets/img/Index_Page.png)
  
 ## Final Result
 You can find the website [here](http://.com/)

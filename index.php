@@ -7,6 +7,7 @@
     <title>Minichat</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header>
         <div class="titles">
@@ -24,24 +25,18 @@
                         <label for="message" class="title_message">Message : </label>
                         <textarea type="text" name="message" id="textarea_message"></textarea>
                     </div>
-                    <button class="button_submit">envoyer</button>
-                </div> 
+                    <button class="button_submit">Envoyer</button>
+                </div>
             </form>
             <div class="userMessages_container">
                 <?php
-                try{
-                    $bd = new PDO("mysql:host=localhost;port=3307;dbname=minichat;charset=utf8",'root','');
-                    }
-                    catch(Exception $e){
-                        die('Erreur : '.$e->getMessage());
-                    }
-
+                include_once("db.php");
                 $reponse= $bd->query('SELECT pseudo, message FROM users_minichat ORDER BY ID DESC LIMIT 0, 10');
                 
                 while($donnees=$reponse->fetch()){
                     echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : ' . htmlspecialchars($donnees['message']) . '</p>';
                 }
-                $reponse->closeCursor();
+                $reponse->closeCursor();     
                 ?>
             </div>
         </div>
